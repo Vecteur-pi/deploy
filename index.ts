@@ -10,16 +10,16 @@ async function main() {
         posts: {
           create: { title: 'Hello World' },
         },
-        profile: {
-          create: { bio: 'I like turtles' },
-        },
+        // profile: {
+        //   create: { bio: 'I like turtles' },
+        // },
       },
     })
   
     const allUsers = await prisma.user.findMany({
       include: {
         posts: true,
-        profile: true,
+      //   profile: false,
       },
     })
     console.dir(allUsers, { depth: null })
