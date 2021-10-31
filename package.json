@@ -4,8 +4,8 @@
   "homepage": "https://bitbucket.org/webcastor/poc-bertrand#readme",
   "scripts": {
     "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server",
-    "start": "node dist/server",
-    "clean": "rimraf -rf dist",
+    "start": "node src/server",
+    "clean": "rimraf -rf ",
     "build": "npm -s run clean && npm -s run generate && tsc",
     "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
     "generate:prisma": "prisma generate",
